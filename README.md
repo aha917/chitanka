@@ -14,7 +14,7 @@ A small helper for the [Chitanka.info](https://chitanka.info) contribution workf
 
 - Python 3.x (only to run from source or rebuild the GUI)
 
-<!-- TODO: list dependencies, e.g. the library used to read ODT, and add a requirements.txt -->
+<!-- TODO: -->
 
 ```bash
 pip install -r requirements.txt
@@ -47,7 +47,7 @@ This produces a single self-contained `tofsb.exe` in the `dist/` folder.
 
 ## License
 
-<!-- TODO: pick a license (MIT is a common, simple choice) and add a LICENSE file -->
+<!-- TODO: -->
 
 ## Contributing
 
