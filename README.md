@@ -14,9 +14,17 @@ A small helper for the [Chitanka.info](https://chitanka.info) contribution workf
 ## Requirements
 Python Modules used: argparse, contextlib, io, os, queue, sys, threading, traceback, re, zipfile, xml.etree.ElementTree, tkinter - all standard library, nothing to pip install.
 
-Only requirement for building is pyinstaller; odt2sfb.py must sit in the same local directory as odt2sfb_gui.py since it's imported directly.
+
+### GUI Building 
+Only requirement for building is [PyInstaller](https://pyinstaller.org):; odt2sfb.py must sit in the same local directory as odt2sfb_gui.py since it's imported directly.
+
+```bash
 pip install pyinstaller
-pyinstaller --onefile --windowed --name odt2sfb odt2sfb_gui.py
+pyinstaller --noconsole --onefile --name tofsb.exe odt2sfb.py
+```
+
+This produces a single self-contained `tofsb.exe` in the `dist/` folder.
+
 
 ### Linux Requirements
 * Python 3.x (only to run from source or rebuild the GUI)
@@ -35,16 +43,6 @@ Run `tofsb.exe`, pick your `.odt` file, and the `.sfb` output is written for you
 ```bash
 python odt2sfb.py
 ```
-
-## GUI building
-
-The executable is built with [PyInstaller](https://pyinstaller.org):
-
-```bash
-pyinstaller --noconsole --onefile --name tofsb.exe odt2sfb.py
-```
-
-This produces a single self-contained `tofsb.exe` in the `dist/` folder.
 
 ## License
 
