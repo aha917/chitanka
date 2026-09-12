@@ -1,54 +1,77 @@
 # odt2sfb
 
-A small helper for the [Chitanka.info](https://chitanka.info) contribution workflow. 
-It converts OpenDocument Text (`.odt`) files into Chitanka's **SFB** markup, so prepared books can be submitted with less manual reformatting.
+A small helper for the [Chitanka.info](https://chitanka.info) contribution workflow.
+
+It converts OpenDocument Text (`.odt`) files into Chitanka's **SFB** markup — the
+plain-text format Chitanka uses for book submissions — so a prepared manuscript can be
+uploaded with far less manual reformatting.
 
 ## Features
 
 - Converts `.odt` documents to `.sfb`
-- Runs as a plain Python script `odt2sfb.py`
-- Standalone Windows GUI `tofsb.exe` - no Python install needed
-- Standalone Linux GUI `odt2sfb_gui.py`
+- Command-line script: `odt2sfb.py`
+- Graphical front-end: `odt2sfb_gui.py`
+- Prebuilt standalone Windows GUI: `tofsb.exe` — no Python installation needed
 
-<!-- TODO: list the structural elements it actually handles — headings, epigraphs, poems, footnotes, emphasis, etc. -->
+## Download
 
-## Requirements for odt2sfb.py
-Python Modules used: argparse, contextlib, io, os, queue, sys, threading, traceback, re, zipfile, xml.etree.ElementTree, tkinter - all standard library, nothing to pip install.
+Grab the prebuilt Windows executable from the [Releases page](https://github.com/aha917/chitanka/releases).
+<!-- TODO: confirm this link, or remove this section if you don't publish releases. -->
 
-
-### GUI Requirements & Building 
-Only requirement for building is [PyInstaller](https://pyinstaller.org):; odt2sfb.py must sit in the same local directory as odt2sfb_gui.py since it's imported directly.
-
-```bash
-pip install pyinstaller
-pyinstaller --noconsole --onefile --name tofsb.exe odt2sfb.py
-```
-
-This produces a single self-contained `tofsb.exe` in the `dist/` folder.
-
-
-### Linux Requirements
-* Python 3.x (only to run from source or rebuild the GUI)
-
-### Windows Requirements
-* The already-built odt2sfb_gui.exe in that folder needs nothing installed — it runs standalone on Windows.
+Linux and macOS users run from source (see below).
 
 ## Usage
 
-### GUI (Linux / Windows)
+### GUI
 
-Run `tofsb.exe`, pick your `.odt` file, and the `.sfb` output is written for you.
+- **Windows:** double-click `tofsb.exe`, pick your `.odt` file, and the `.sfb` output is
+  written next to it.
+- **Linux / macOS:** run the GUI from source:
 
-### Shell Python
+  ```bash
+  python odt2sfb_gui.py
+  ```
+
+### Command line
 
 ```bash
-python odt2sfb.py
+python odt2sfb.py input.odt output.sfb
 ```
+<!-- TODO: replace with the real argument signature from your argparse setup. -->
+
+## Requirements
+
+### Running from source
+
+- Python 3.x
+- No third-party packages — `odt2sfb.py` uses only the standard library
+  (`argparse`, `zipfile`, `xml.etree.ElementTree`, `tkinter`, etc.).
+
+  On some Linux distributions `tkinter` is a separate package, e.g.:
+
+  ```bash
+  sudo apt install python3-tk      # Debian / Ubuntu
+  ```
+
+### Building the standalone GUI
+
+Building the single-file executable needs [PyInstaller](https://pyinstaller.org).
+`odt2sfb.py` must sit in the same directory as `odt2sfb_gui.py`, since the GUI imports it directly.
+
+```bash
+pip install pyinstaller
+pyinstaller --noconsole --onefile --name tofsb odt2sfb_gui.py
+```
+
+This produces a self-contained `tofsb.exe` in the `dist/` folder.
+(Note: the build entry point is `odt2sfb_gui.py`, not `odt2sfb.py`, and `--name tofsb`
+lets PyInstaller add the `.exe` extension itself.)
 
 ## License
 
-<!-- TODO: -->
+<!-- TODO: add a license. MIT is a common, permissive choice for a small tool like this. -->
 
 ## Contributing
 
-Issues and pull requests are welcome — this exists to smooth the Chitanka.info workflow, so suggestions from fellow contributors are appreciated.
+Issues and pull requests are welcome — this exists to smooth the Chitanka.info workflow,
+so suggestions from fellow contributors are appreciated.
