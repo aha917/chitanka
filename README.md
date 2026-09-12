@@ -35,7 +35,7 @@ python odt2sfb.py
 <!-- TODO: if the script takes command-line arguments instead of a file dialog,
      document them here, e.g.:  python odt2sfb.py input.odt output.sfb -->
 
-## Building the GUI
+## GUI building: 
 
 The executable is built with [PyInstaller](https://pyinstaller.org):
 
