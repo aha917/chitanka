@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-### GUI (Windows)
+### GUI (Linux / Windows)
 
 Run `tofsb.exe`, pick your `.odt` file, and the `.sfb` output is written for you.
 
