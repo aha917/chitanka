@@ -1,6 +1,7 @@
 # odt2sfb
 
-A small helper for the [Chitanka.info](https://chitanka.info) contribution workflow. It converts OpenDocument Text (`.odt`) files into Chitanka's **SFB** markup, so prepared books can be submitted with less manual reformatting.
+A small helper for the [Chitanka.info](https://chitanka.info) contribution workflow. 
+It converts OpenDocument Text (`.odt`) files into Chitanka's **SFB** markup, so prepared books can be submitted with less manual reformatting.
 
 ## Features
 
