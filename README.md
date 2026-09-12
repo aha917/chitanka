@@ -13,13 +13,12 @@ A small helper for the [Chitanka.info](https://chitanka.info) contribution workf
 
 ## Requirements
 
-- Python 3.x (only to run from source or rebuild the GUI)
+### Linux Requirements:
+* Python 3.x (only to run from source or rebuild the GUI)
 
-<!-- TODO: -->
 
-```bash
-pip install -r requirements.txt
-```
+### Windows Requirements
+* The already-built odt2sfb_gui.exe in that folder needs nothing installed — it runs standalone on Windows.
 
 ## Usage
 
