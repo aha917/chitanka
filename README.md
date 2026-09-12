@@ -12,11 +12,11 @@ It converts OpenDocument Text (`.odt`) files into Chitanka's **SFB** markup, so 
 
 <!-- TODO: list the structural elements it actually handles — headings, epigraphs, poems, footnotes, emphasis, etc. -->
 
-## Requirements
+## Requirements for odt2sfb.py
 Python Modules used: argparse, contextlib, io, os, queue, sys, threading, traceback, re, zipfile, xml.etree.ElementTree, tkinter - all standard library, nothing to pip install.
 
 
-### GUI Building 
+### GUI Requirements & Building 
 Only requirement for building is [PyInstaller](https://pyinstaller.org):; odt2sfb.py must sit in the same local directory as odt2sfb_gui.py since it's imported directly.
 
 ```bash
