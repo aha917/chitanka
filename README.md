@@ -12,10 +12,10 @@ A small helper for the [Chitanka.info](https://chitanka.info) contribution workf
 <!-- TODO: list the structural elements it actually handles — headings, epigraphs, poems, footnotes, emphasis, etc. -->
 
 ## Requirements
+Python Modules used: argparse, contextlib, io, os, queue, sys, threading, traceback, re, zipfile, xml.etree.ElementTree, tkinter - all standard library, nothing to pip install.
 
-### Linux Requirements:
+### Linux Requirements
 * Python 3.x (only to run from source or rebuild the GUI)
-
 
 ### Windows Requirements
 * The already-built odt2sfb_gui.exe in that folder needs nothing installed — it runs standalone on Windows.
@@ -26,14 +26,11 @@ A small helper for the [Chitanka.info](https://chitanka.info) contribution workf
 
 Run `tofsb.exe`, pick your `.odt` file, and the `.sfb` output is written for you.
 
-### From source
+### Shell Python
 
 ```bash
 python odt2sfb.py
 ```
-
-<!-- TODO: if the script takes command-line arguments instead of a file dialog,
-     document them here, e.g.:  python odt2sfb.py input.odt output.sfb -->
 
 ## GUI building
 
