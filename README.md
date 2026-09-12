@@ -7,7 +7,7 @@ A small helper for the [Chitanka.info](https://chitanka.info) contribution workf
 - Converts `.odt` documents to `.sfb`
 - Runs as a plain Python script `odt2sfb.py`
 - Standalone Windows GUI `tofsb.exe` - no Python install needed
-- Standalone Linux GUI `python3 odt2sfb_gui.py`
+- Standalone Linux GUI `python3 odt2sfb_gui.py odt2sfb_gui.py`
 
 <!-- TODO: list the structural elements it actually handles — headings, epigraphs, poems, footnotes, emphasis, etc. -->
 
